@@ -48,7 +48,7 @@ def home():
     """Render the home page."""
     return render_template("main.html")
 
-@app.route("/shubh/information/<var>/")
+@app.route("/del/information/<var>/")
 def all(var):
     """Display or delete information based on the URL."""
     clean_expired_links()
