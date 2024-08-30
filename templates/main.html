@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}SHORT-IT{% endblock %}
+{% block body %} <div class="wrap-input100 validate-input m-b-20" data-validate="Enter url to be shortened">
+	<input class="input100" type="url" name="url" placeholder="Enter url to be shortened">
+	<span class="focus-input100"></span>
+</div>
+
+<div class="wrap-input100 validate-input m-b-25" data-validate="Enter alias to be used">
+	<input class="input100" type="text" name="alias" placeholder="Enter alias to be used">
+	<span class="focus-input100"></span>
+</div>
+
+<div class="container-login100-form-btn">
+	<button class="login100-form-btn" type="submit">
+		Shorten
+	</button>
+</div>
+{% endblock %}

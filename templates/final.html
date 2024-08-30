@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!DOCTYPE html>
+<html lang="en">
+{% extends "base.html" %}
+{% block title %}SHORT-IT{% endblock %}
+{% block body %} <div class="wrap-input100 validate-input m-b-25" data-validate="Here Is Your Link">
+    <input class="input100" type="text" name="alias" placeholder="Here Is Your Link" value={{link}}>
+    <span class="focus-input100"></span>
+</div>
+<!-- <div class="wrap-input100 validate-input m-b-25" data-validate="Enter alias to be used"> -->
+<div class="wrap-input109 validate-input m-b-25">
+    <img src="" id="dd" class="input109"></img>
+</div>
+<!-- </div> -->
+
+<script>
+    data = "{{data}}"
+    data = data.replace("b&#39;", "") //to get rid of start curly brace code 
+    data = data.replace("&#39;", "")  //to get rid of end curly bracecode 
+
+    document.getElementById("dd").src = "data:image/png;base64," + data; // set src
+</script>
+<div class="container-login100-form-btn">
+    <button class="login100-form-btn" type="button" onclick="window.location.href='/'">
+        Back
+    </button>
+</div>{% endblock %}
