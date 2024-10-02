@@ -1,7 +1,0 @@
-gunicorn==20.0.4
-flask
-prettytable
-qrcode[PIL]
-pillow
-mysql.connector
-flask_sitemap

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}SHORT-IT{% endblock %}
+<style>
+	body {
+		background-color: #000000;
+	}
+</style>
+{% block body %} {% with messages = get_flashed_messages() %}
+{% if messages %}
+<script>
+	var messages = {{ messages | safe }};
+	for (var i = 0; i < messages.length; i++) {
+		alert(messages[i]);
+	}
+</script>
+{% endif %}
+{% endwith %}<div class="wrap-input100 validate-input m-b-20" data-validate="Enter url to be shortened">
+	<input class="input100" type="url" name="url" placeholder="Enter url to be shortened">
+	<span class="focus-input100"></span>
+</div>
+<div class="wrap-input100 validate-input m-b-25" data-validate="Enter alias to be used">
+	<input class="input100" type="text" name="alias" placeholder="Enter alias to be used">
+	<span class="focus-input100"></span>
+</div>
+<div class="wrap-input100 validate-input m-b-25" style="background-color: transparent; color:#666666">
+	<input type="checkbox" id="useAlias" name="useAlias" value="useAlias">
+	<label for="useAlias">Generate Random Alias(incase alias is unavailable)</label>
+</div>
+
+<div class="container-login100-form-btn">
+	<button class="login100-form-btn" type="submit" formmethod="post" formaction="/short">
+		Shorten
+	</button>
+</div>
+{% endblock %}
