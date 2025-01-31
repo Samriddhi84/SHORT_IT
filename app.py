@@ -164,32 +164,6 @@ def index():
     """Render the home page."""
     return render_template("index.html")
 
-
-# def login_required(f):
-#     """Wrapper to check if the user is logged in."""
-#     from functools import wraps
-
-#     @wraps(f)
-#     def wrapper(*args, **kwargs):
-#         if not session.get("logged_in"):
-#             return redirect(url_for("auth.login"))  # Redirect to the login page
-#         return f(*args, **kwargs)
-
-#     return wrapper
-
-
-# @app.errorhandler(404)
-# def page_not_found(e):
-#     """Handle 404 errors."""
-#     return redirect("/")
-
-
-# @app.route("/home", methods=["GET"])
-# @login_required
-# def home():
-#     return render_template("home.html", user_data=session.get("user_data"))
-
-
 @app.route("/short", methods=["POST"])
 def short():
     """Handle URL shortening requests."""
@@ -230,13 +204,6 @@ def short():
                 flash("Alias already exists or is invalid.")
 
     return redirect("/")
-
-    # if db.save_url(email, alias, url):
-    #     flash(f"URL shortened successfully to {alias}.")
-    # else:
-    #     flash("Alias already exists or is invalid.")
-
-    # return redirect("/")
     return redirect(url_for("qr", var=alias))
 
 
