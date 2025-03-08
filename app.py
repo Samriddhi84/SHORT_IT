@@ -3,7 +3,7 @@ import qrcode
 import base64
 from io import BytesIO
 import os
-import util as db  # Assuming this is your util module
+import util as db  # Assuming this is your util module 
 from auth import auth_bp  # Import the authentication blueprint
 
 app = Flask(__name__)
