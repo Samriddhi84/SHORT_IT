@@ -10,7 +10,7 @@ A simple, efficient URL shortener with QR code generation and visit tracking.
 - [Features](#-features)
 - [Screenshots](#-screenshots)
 - [Installation](#️-installation)
-- [Usage](#-usage)
+- [Usage](#-usage) 
 - [Code Structure](#-code-structure)
 - [Contributing](#-contributing)
 - [License](#-license)
