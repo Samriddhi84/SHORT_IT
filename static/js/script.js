@@ -9,12 +9,6 @@ function ansvalidation(ev) {
         window.alert("Passwords do not match!");
         return false;
     } else {
-        // window.alert("Passwords match! Form will be submitted.");
-        // window.location.replace("/templates/main.html");
-        // Submit the form
-
-        // return true;
-
         return true;
     }
 }
