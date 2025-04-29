@@ -10,7 +10,7 @@ app = Flask(__name__)
 app.secret_key = os.environ.get(
     "SECRET_KEY", "default_secret_key"
 )  # Use a strong key in production
-
+ 
 # Register the authentication blueprint
 app.register_blueprint(auth_bp, url_prefix="/dashboard")
 
